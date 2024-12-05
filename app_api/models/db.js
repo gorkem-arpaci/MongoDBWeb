@@ -1,5 +1,7 @@
+require("dotenv").config()
+
 var mongoose = require('mongoose');
-var dbURI = "mongodb+srv://gorkemarpaci19:aX7BmQkdxTEoUIuE@gorko.7nd3b.mongodb.net/"
+var dbURI =`mongodb+srv://gorkemarpaci19:${MONGODB_PASSWORD}E@gorko.7nd3b.mongodb.net/`
 
 mongoose.connect(dbURI)
 mongoose.connection.on("connected", function(){
